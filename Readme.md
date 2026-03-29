@@ -370,4 +370,6 @@ Made with 💖 and a lot of Bézier math
 
 ⭐ Star this repo if it saved you time
 
+Will add Lucide LAB Icons later
+
 </div>
