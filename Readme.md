@@ -18,3 +18,6 @@ Contributions are welcome. Submit a pull request to help improve the project and
 ## Used By
 
 If you use this tool in a project that gains popularity, feel free to contact me at **triocantgetme@gmail.com**.
+
+
+## Fully open source 💖
