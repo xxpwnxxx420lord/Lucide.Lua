@@ -1,21 +1,19 @@
-local ROOT      = "lucide/"
-local CACHE_DIR = ROOT .. "cache/"
-local ICONS_DIR = ROOT .. "icons/"
+local ROOT      = "https://raw.githubusercontent.com/xxpwnxxx420lord/Lucide.Lua/refs/heads/main/"
+local CACHE_DIR = "lucide_cache/"
 local CHUNKS    = 9
 
-local function loadFile(path: string): any
-	return loadstring(readfile(path))()
+local function loadRemote(path: string): any
+	return loadstring(game:HttpGet(ROOT .. path, true))()
 end
 
-if not isfolder(ROOT)      then makefolder(ROOT)      end
-if not isfolder(CACHE_DIR) then makefolder(CACHE_DIR) end
+makefolder(CACHE_DIR)
 
-local Renderer = loadFile(ROOT .. "Renderer.lua")
+local Renderer = loadRemote("Renderer.lua")
 
 local IconData: {[string]: {{tag: string, attrs: {[string]: string}}}} = {}
 
 for i = 1, CHUNKS do
-	local chunk: {[string]: {{tag: string, attrs: {[string]: string}}}} = loadFile(ICONS_DIR .. string.format("chunk_%02d.lua", i))
+	local chunk: {[string]: {{tag: string, attrs: {[string]: string}}}} = loadRemote(string.format("icons/chunk_%02d.lua", i))
 	for name, node in pairs(chunk) do
 		IconData[name] = node
 		local alias = name:gsub("%-", "_")
