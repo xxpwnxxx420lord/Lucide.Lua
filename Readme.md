@@ -372,4 +372,6 @@ Made with 💖 and a lot of Bézier math
 
 Will add Lucide LAB Icons later
 
+[![Star History Chart](https://api.star-history.com/image?repos=xxpwnxxx420lord/lucide.lua&type=date&legend=top-left)](https://www.star-history.com/?repos=xxpwnxxx420lord%2Flucide.lua&type=date&legend=top-left)
+
 </div>
